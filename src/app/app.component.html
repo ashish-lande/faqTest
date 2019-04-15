@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <div class="col-md-12">
+    <h4>FAQ(Frequently Asked Question)</h4>
+    <hr />
+    <app-accordion
+      *ngFor="let q of questionData"
+      [queTitle]="q.question"
+      [opened]="q.isOpen"
+      (toggle)="q.isOpen = !q.isOpen"
+    >
+      {{ q.answer }}
+    </app-accordion>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,17 @@
+<div class="justify-content-center">
+  <div class="card">
+    <div class="card-title" (click)="onQuestionClick()">
+      <div class="col-12">
+        <a href="javascript:void(0)" class="float-left">
+          <h5>{{ queTitle }}</h5></a
+        >
+      </div>
+    </div>
+
+    <div class="card-body" *ngIf="opened">
+      <div class="col-md-12">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+</div>
